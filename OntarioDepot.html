@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Ontario Depot Map</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    
 
     <style>
             #map {
@@ -17,6 +16,22 @@
 </head>
 <body>
     <h3> Ontario Depot Map on Google Maps</h3>
+     <div id = "map"></div>
+     
+     <script>
+
+         function initMap(){
+             var centerpoint = {lat: 43.661780, lng: -79.390824};
+             var map = new google.maps.Map(document.getElementById('map'), {
+                 zoom: 11,
+                 center: centerpoint
+             })
+         };
+     </script>
+
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJouu6zobWghxidoAazuPeXFdrMvgIq4A&callback=initMap">
+    </script>
 
 </body>
 </html>
